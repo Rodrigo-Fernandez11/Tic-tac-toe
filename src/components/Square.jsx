@@ -1,11 +1,13 @@
+// componente para cada uno de los cuadritos
+export const Square = ({ children, isSelected, updateBoard, index }) => {
+  const className = `square ${isSelected ? 'is-selected' : ''}`
 
-export function Square() {
-    const [value, setValue] = React.useState(null);
-  
-    return (
-      <button onClick={() => setValue('X')}>
-        {value}
-      </button>
-    );
+  const handleClick = () => {
+    updateBoard(index)
   }
-  
+  return(
+    <div onClick={handleClick} className={className}>
+      {children}
+    </div>
+  );
+}

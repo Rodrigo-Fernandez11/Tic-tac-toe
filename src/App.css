@@ -113,3 +113,10 @@
   cursor: pointer;
   font-size: 48px;
 }
+
+.versus{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
